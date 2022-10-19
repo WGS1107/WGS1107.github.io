@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-10-19T11:00:13.768Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>html</title>
+    <link href="http://example.com/2022/10/19/html/"/>
+    <id>http://example.com/2022/10/19/html/</id>
+    <published>2022-10-19T10:58:36.000Z</published>
+    <updated>2022-10-19T11:00:13.768Z</updated>
+    
+    <content type="html"><![CDATA[<!--文档类型声明标签--><!DOCTYPE html><!--告诉浏览器/搜索引擎采用英文界面显示--><html lang="en"><head>    <meta charset="UTF-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>利用VS创建页面</title></head><body>    <!-- ctrl + / 注释快捷键 -->    <h1>标题标签</h1>    <h2>双击打开软件</h2>    <h3>新建文件 ctrl +</h3>    <h4>一定要先保存.html文件</h4>    <h5>CTRL+/—放大缩小视图</h5>    <h6>输入！按下Tab直接生成骨架结构</h6>    <p>我呢是段落标签，将文本分为几个段落，强制换行<br>根据浏览器窗口大小自动换行，且段落之间保有空隙 </p>    小老弟，看我<strong>变粗</strong>换一种方式继续<b>变粗<b><br>            我会用<em>倾斜眼</em>瞅你换一种方式<i>继续倾斜</i><br>            <del>我把自己删除了</del>或者<s>继续删除</s>            <ins>下划线</ins>或者<u>这个也是下划线</u>            <div>大哥独占一行</div><span>我 和大哥一行并且可以放好多个</span><pre><code>        &lt;h1&gt;图片格式要么修改宽度或者高度以防图片失真&lt;/h1&gt;        &lt;img src=&quot;相对路径：相对于.html同一级别位置,上一级路径使用../ &quot; alt=&quot;图片信息加载不出来时用文字替换&quot; title=&quot;鼠标放到图片提示文字&quot; width=&quot;100px&quot;            height=&quot;20px&quot; border=&quot;15&quot; /&gt;        &lt;!--绝对路径:从盘符开始/从网络http://--&gt;        &lt;img src=&quot;D:\web\logo.gif&quot;&gt;        &lt;!--内链接默认当前页面--&gt;        &lt;a href=&quot;nihao.html&quot; target=&quot;_self&quot;&gt;ni&lt;/a&gt;        &lt;!--外链接新窗口页面--&gt;        &lt;a href=&quot;http://www.baidu.com&quot; target=&quot;_blank&quot;&gt;百度&lt;/a&gt;        &lt;!--空新窗口页面--&gt;        &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;百度&lt;/a&gt;        &lt;!--点击链接自动下载--&gt;        &lt;a href=&quot;.exe/zip的文件格式&quot; target=&quot;_blank&quot;&gt;点击下载&lt;/a&gt;        &lt;!--锚点链接可快速定位，标签内部声明id属性--&gt;        &lt;a href=&quot;#id名&quot;&gt;点我定位&lt;/a&gt;        &lt;!--特殊字符--&gt;        &lt;p&gt;空&amp;nbsp;&amp;nbsp;格&lt;/p&gt;        &lt;p&gt;&amp;it;空格&amp;gt;&lt;/p&gt;</code></pre></html>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;!--文档类型声明标签--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;!--告诉浏览器/搜索引擎采用英文界面显示--&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Com</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2022/10/19/hello-world/"/>
+    <id>http://example.com/2022/10/19/hello-world/</id>
+    <published>2022-10-19T09:23:20.152Z</published>
+    <updated>2022-10-19T09:23:20.152Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
