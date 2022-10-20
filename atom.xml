@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-10-19T13:18:41.417Z</updated>
+  <updated>2022-10-20T09:04:06.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,32 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>html</title>
-    <link href="http://example.com/2022/10/19/html-1/"/>
-    <id>http://example.com/2022/10/19/html-1/</id>
-    <published>2022-10-19T13:18:41.000Z</published>
-    <updated>2022-10-19T13:18:41.417Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title></title>
-    <link href="http://example.com/2022/10/19/java/"/>
-    <id>http://example.com/2022/10/19/java/</id>
-    <published>2022-10-19T13:12:42.536Z</published>
-    <updated>2022-10-19T13:16:35.076Z</updated>
+    <link href="http://example.com/2022/10/20/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80/vbscript/"/>
+    <id>http://example.com/2022/10/20/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80/vbscript/</id>
+    <published>2022-10-20T10:12:34.196Z</published>
+    <updated>2022-10-20T09:04:06.000Z</updated>
     
-    <content type="html"><![CDATA[<p>飞鹅鹅鹅鹅鹅鹅鹅鹅鹅鹅鹅鹅鹅</p>]]></content>
+    <content type="html"><![CDATA[<h4 id="方法1调用方法2"><a href="#方法1调用方法2" class="headerlink" title="方法1调用方法2"></a>方法1调用方法2</h4><figure class="highlight vbscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs vbscript"><span class="hljs-keyword">public</span> <span class="hljs-keyword">Function</span> ExecuteParamSql(<span class="hljs-keyword">ByVal</span> sql,<span class="hljs-keyword">ByVal</span> params)<br>    <span class="hljs-keyword">Dim</span> objRs,cmd,param<br>    <span class="hljs-keyword">On</span> <span class="hljs-keyword">Error</span> <span class="hljs-keyword">REsume</span> <span class="hljs-keyword">Next</span><br>        SQLCODE = <span class="hljs-number">0</span><br>        ra = <span class="hljs-number">-1</span><br>        <span class="hljs-keyword">Set</span> cmd = CreatObject(<span class="hljs-string">&quot;ADODB.Command&quot;</span>)<span class="hljs-comment">&#x27;创建执行面向数据库的一次简单查询对象</span><br>        cmd.CommandText = sql<span class="hljs-comment">&#x27;可设置或返回一个字符串，该字符串包含一个 provider 命令，比如SQL语句表名称一个相对 URL、或者一个存储过程调用。</span><br>    cmd.CommandType = <span class="hljs-number">1</span><span class="hljs-comment">&#x27;返回一个类型</span><br>    <span class="hljs-keyword">for</span> <span class="hljs-keyword">Each</span> param <span class="hljs-keyword">In</span> params <span class="hljs-comment">&#x27;paramter依赖于命令对象使用</span><br>        CreateParamter cmd,param,<span class="hljs-number">1</span>,<span class="hljs-literal">empty</span>,<span class="hljs-literal">empty</span><span class="hljs-comment">&#x27;paramter只能存储单个参数信息所以每次循环</span><br>        <span class="hljs-comment">&#x27;对象名，参数，传入1，  </span><br>        <span class="hljs-keyword">Next</span><br>        cmd.ActiveConnection =dbConn<br>        cmd.<span class="hljs-keyword">Execute</span> ra  <span class="hljs-comment">&#x27;取得sql运行变更件数</span><br>        <span class="hljs-keyword">Set</span> cmd = <span class="hljs-literal">Nothing</span><br>        <span class="hljs-keyword">if</span> Err.Number &lt;&gt; <span class="hljs-number">0</span> <span class="hljs-keyword">Then</span>  <span class="hljs-comment">&#x27;错误处理</span><br>            OnsqlError sql,params<br>        <span class="hljs-keyword">End</span> <span class="hljs-keyword">If</span><br>        Err.Clear<br>    <span class="hljs-keyword">On</span> <span class="hljs-keyword">Error</span> <span class="hljs-keyword">Goto</span> <span class="hljs-number">0</span><br>    ExecuteParamSql = ra<br><span class="hljs-keyword">End</span> <span class="hljs-keyword">Function</span><br>    <br>    <br></code></pre></td></tr></table></figure><h5 id="方法2-执行带参数的sql语句查询先要将参数数据类型进行数据转换"><a href="#方法2-执行带参数的sql语句查询先要将参数数据类型进行数据转换" class="headerlink" title="方法2 执行带参数的sql语句查询先要将参数数据类型进行数据转换"></a>方法2 执行带参数的sql语句查询先要将参数数据类型进行数据转换</h5><figure class="highlight vbscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs vbscript"><span class="hljs-keyword">public</span> <span class="hljs-keyword">Sub</span> CreateParameter(<span class="hljs-keyword">ByVal</span> cmd,<span class="hljs-keyword">ByVal</span> value,<span class="hljs-keyword">ByVal</span> direction,<span class="hljs-keyword">ByVal</span> name,<span class="hljs-keyword">ByVal</span> size)<br>    <span class="hljs-keyword">Dim</span> param<br>    <span class="hljs-keyword">Set</span> param = cmd.CreateParamter()<br>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">Not</span> <span class="hljs-built_in">IsEmpty</span>(name) <span class="hljs-keyword">Then</span><br>        param.Name = name<br>    <span class="hljs-keyword">End</span> <span class="hljs-keyword">IF</span><br>    param.Value = value<br>    param.Directoin = direction<br>    <span class="hljs-keyword">Select</span> <span class="hljs-keyword">Case</span>  CheckType(value)<br>    <span class="hljs-keyword">Case</span> vbString    <span class="hljs-comment">&#x27;param储存单个信息使用参数在命令执行前来改变命令的某些细节比如先将数据类型和ado访问数据库的类型进行统一转型</span><br>        para.Type =<span class="hljs-number">202</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">IsEmpty</span>(size) <span class="hljs-keyword">Then</span><br>            param.Size = <span class="hljs-built_in">Len</span>(value)<br>            <span class="hljs-keyword">If</span> param.Size = <span class="hljs-number">0</span> <span class="hljs-keyword">Then</span><br>                param.Size =<span class="hljs-number">1</span><br>            <span class="hljs-keyword">End</span> <span class="hljs-keyword">If</span><br>        <span class="hljs-keyword">Else</span><br>            param.Size = size<br>        <span class="hljs-keyword">End</span> <span class="hljs-keyword">If</span><br>    <span class="hljs-keyword">Case</span> vbInteger,vbLong,vbByte<br>        param.Type = <span class="hljs-number">5</span><br>    <span class="hljs-keyword">Case</span> vbSingle,vbDouble,<span class="hljs-number">14</span><br>        param.Type = <span class="hljs-number">5</span><br>    <span class="hljs-keyword">Case</span> vbDate<br>        param.Type =<span class="hljs-number">135</span><br>    <span class="hljs-keyword">Case</span> vbBoolean<br>        param.Type =<span class="hljs-number">11</span><br>    <span class="hljs-keyword">Case</span> vbCurrency<br>        param.Type =<span class="hljs-number">6</span><br>    <span class="hljs-keyword">Case</span> vbEmpty,vbNull<br>        param.Type =<span class="hljs-number">0</span><br>    <span class="hljs-keyword">Case</span> <span class="hljs-keyword">Else</span><br>        param.Type =<span class="hljs-number">200</span><br>    <span class="hljs-keyword">End</span> <span class="hljs-keyword">Select</span><br>    cmd.Parameters.Append param   <span class="hljs-comment">&#x27;将对象追加到集合</span><br><span class="hljs-keyword">End</span> <span class="hljs-keyword">Sub</span><br>        <br>        <br>            <br>            <br>    <br>    <br>    <br>        <br></code></pre></td></tr></table></figure>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;飞鹅鹅鹅鹅鹅鹅鹅鹅鹅鹅鹅鹅鹅&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;h4 id=&quot;方法1调用方法2&quot;&gt;&lt;a href=&quot;#方法1调用方法2&quot; class=&quot;headerlink&quot; title=&quot;方法1调用方法2&quot;&gt;&lt;/a&gt;方法1调用方法2&lt;/h4&gt;&lt;figure class=&quot;highlight vbscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
       
     
     
@@ -52,31 +38,17 @@
   
   <entry>
     <title></title>
-    <link href="http://example.com/2022/10/19/js/"/>
-    <id>http://example.com/2022/10/19/js/</id>
-    <published>2022-10-19T13:12:20.105Z</published>
-    <updated>2022-10-19T13:12:20.105Z</updated>
+    <link href="http://example.com/2022/10/20/%E9%85%8D%E7%BD%AE%E6%89%8B%E9%A1%BA/VBScript,javascript,debugger%E5%B7%A5%E5%85%B7(VS%20code%202012)/"/>
+    <id>http://example.com/2022/10/20/%E9%85%8D%E7%BD%AE%E6%89%8B%E9%A1%BA/VBScript,javascript,debugger%E5%B7%A5%E5%85%B7(VS%20code%202012)/</id>
+    <published>2022-10-20T10:12:34.188Z</published>
+    <updated>2022-10-20T06:31:32.000Z</updated>
     
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2022/10/19/html/"/>
-    <id>http://example.com/2022/10/19/html/</id>
-    <published>2022-10-19T12:42:37.302Z</published>
-    <updated>2022-10-19T13:14:42.387Z</updated>
-    
-    <content type="html"><![CDATA[<p>cscssssssssss</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="1，创建项目"><a href="#1，创建项目" class="headerlink" title="1，创建项目"></a>1，创建项目</h2><h2 id=""><a href="#" class="headerlink" title=""></a><img src="http://algorhythnn.jp/blg/wp/wp-content/uploads/2013/11/vbs-debug-use-visual_studio2010_st01.png" alt="手顺1"></h2><p><img src="http://algorhythnn.jp/blg/wp/wp-content/uploads/2013/11/vbs-debug-use-visual_studio2010_st02.png" alt="手顺2"></p><h2 id="2，删除对应文件"><a href="#2，删除对应文件" class="headerlink" title="2，删除对应文件"></a>2，删除对应文件</h2><p><img src="http://algorhythnn.jp/blg/wp/wp-content/uploads/2013/11/vbs-debug-use-visual_studio2010_st04.png"></p><p><img src="http://algorhythnn.jp/blg/wp/wp-content/uploads/2013/11/vbs-debug-use-visual_studio2010_st05.png"></p><p><img src="http://algorhythnn.jp/blg/wp/wp-content/uploads/2013/11/vbs-debug-use-visual_studio2010_st06.png" alt="http://algorhythnn.jp/blg/wp/wp-content/uploads/2013/11/vbs-debug-use-visual_studio2010_st06.png"></p><h2 id="3，打开explore"><a href="#3，打开explore" class="headerlink" title="3，打开explore"></a>3，打开explore</h2><p><img src="http://algorhythnn.jp/blg/wp/wp-content/uploads/2013/11/vbs-debug-use-visual_studio2010_st07.png"></p><p><img src="http://algorhythnn.jp/blg/wp/wp-content/uploads/2013/11/vbs-debug-use-visual_studio2010_st08.png"></p><p><img src="http://algorhythnn.jp/blg/wp/wp-content/uploads/2013/11/vbs-debug-use-visual_studio2010_st09.png"></p><p><img src="http://algorhythnn.jp/blg/wp/wp-content/uploads/2013/11/vbs-debug-use-visual_studio2010_st10.png"></p><h2 id="4，创建文件追加"><a href="#4，创建文件追加" class="headerlink" title="4，创建文件追加"></a>4，创建文件追加</h2><p><img src="http://algorhythnn.jp/blg/wp/wp-content/uploads/2013/11/vbs-debug-use-visual_studio2010_st11.png"></p><p><img src="http://algorhythnn.jp/blg/wp/wp-content/uploads/2013/11/vbs-debug-use-visual_studio2010_st12.png"></p><p><img src="http://algorhythnn.jp/blg/wp/wp-content/uploads/2013/11/vbs-debug-use-visual_studio2010_st13.png"></p><h2 id="5，更改为VBS的debug"><a href="#5，更改为VBS的debug" class="headerlink" title="5，更改为VBS的debug"></a>5，更改为VBS的debug</h2><p><img src="http://algorhythnn.jp/blg/wp/wp-content/uploads/2013/11/vbs-debug-use-visual_studio2010_st14.png"></p><p><img src="http://algorhythnn.jp/blg/wp/wp-content/uploads/2013/11/vbs-debug-use-visual_studio2010_st15.png"></p><p><img src="http://algorhythnn.jp/blg/wp/wp-content/uploads/2013/11/vbs-debug-use-visual_studio2010_st16.png"></p><p><img src="http://algorhythnn.jp/blg/wp/wp-content/uploads/2013/11/vbs-debug-use-visual_studio2010_st17.png"></p><p><img src="http://algorhythnn.jp/blg/wp/wp-content/uploads/2013/11/vbs-debug-use-visual_studio2010_st18.png"></p><p><img src="http://algorhythnn.jp/blg/wp/wp-content/uploads/2013/11/vbs-debug-use-visual_studio2010_st19.png"></p><p><img src="http://algorhythnn.jp/blg/wp/wp-content/uploads/2013/11/vbs-debug-use-visual_studio2010_st20.png"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;cscssssssssss&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;h2 id=&quot;1，创建项目&quot;&gt;&lt;a href=&quot;#1，创建项目&quot; class=&quot;headerlink&quot; title=&quot;1，创建项目&quot;&gt;&lt;/a&gt;1，创建项目&lt;/h2&gt;&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;im</summary>
       
     
     
